@@ -1,0 +1,17 @@
+.basic-info p{
+	font-size: 18px;
+}
+
+.list-view ul{
+	margin: 0px;
+	padding: 0px;	
+}
+
+.list-view li{
+	margin: 0px 0px 7px -40px;
+	padding: 5px;
+	font-size: 18px;
+	list-style: none;
+	border: 1px solid #b7b7b7;
+}
+

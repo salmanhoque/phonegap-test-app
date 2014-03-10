@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=“utf-8”>
+	<title></title>
+	<meta name=“viewport” content=“width=device-width, initial-scale=1, maximum-scale=1” />
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript" src='js/ajax.js'></script>
+
+</head>
+<body>
+	<div id="home" data-role="page" data-theme="c">
+		<div data-role='header'> 
+			<h1>My Movie List</h1> 
+		</div>
+		
+		<div data-role="content">
+			<h2>Hello There!</h2>
+			<input type="text" placeholder="Search Movies" id='searchMovie'/>
+			<a href='#searchpage' data-transition='flip' data-role='button' id='searchButton'>Search</a>
+		</div> <!-- /content -->	
+		
+		<div data-role='footer' data-position='fixed'>
+			<div data-role='navbar'>
+				<ul>
+					<li><a href="#intheater" 
+						data-transition='flip'
+						data-role='button'>In Theater</a></li>
+					<li><a href="#upcoming" 
+						data-transition='flip'
+						data-role='button'>Up Coming</a></li>
+				</ul>		
+			</div> <!-- /navbar -->	
+		</div> <!-- /footer -->		
+	</div> <!-- /home-page -->
+	
+	
+
+	<!-- In theater Page -->
+	<div id="intheater" data-role="page">
+		<div data-role='header'> 
+			<h1>In Theater Movies</h1> 
+			<a href="#home" data-icon="home" data-transition='flip'>Home</a>
+		</div>
+
+		<div id='theaterData'></div> <!--/theater data comes from rottentomatos api-->
+
+		<div data-role='footer' data-position='fixed'>
+			<div data-role='navbar'>
+				<ul>
+					<li><a href="#" 
+						data-transition='flip'
+						data-role='button'>In Theater</a></li>
+					<li><a href="#upcoming" 
+						data-transition='flip'
+						data-role='button'>Up Coming</a></li>
+				</ul>		
+			</div> <!-- /navbar -->	
+		</div> <!-- /footer -->		
+	</div> <!-- /intheater-page -->
+
+
+	<!-- Up Coming page -->
+	<div id="upcoming" data-role="page">
+		<div data-role='header'> 
+			<h1>Up Coming Movies</h1> 
+			<a href="#home" data-icon="home" data-transition='flip'>Home</a>
+		</div>
+
+		<div id='upcomingData'></div> <!--/upcoming data comes from rottentomatos api-->
+		
+		<div data-role='footer' data-position='fixed'>
+			<div data-role='navbar'>
+				<ul>
+					<li><a href="#intheater" 
+						data-transition='flip'
+						data-role='button'>In Theater</a></li>
+					<li><a href="#" 
+						data-transition='flip'
+						data-role='button'>Up Coming</a></li>
+				</ul>		
+			</div> <!-- /navbar -->	
+		</div> <!-- /footer -->		
+	</div> <!-- /upcomgin-page -->
+
+	
+
+
+	<!-- Show page -->
+	<div id="showpage" data-role="page">
+		<div data-role='header'> 
+			<h1>Movie Details</h1> 
+			<a href="#home" data-icon="home" data-transition='flip'>Home</a>
+		</div>
+
+		
+			<div data-role="content" id='showData'>
+				
+			</div> <!--/show data comes from rottentomatos api-->
+		
+
+		<div data-role='footer' data-position='fixed'>
+			<div data-role='navbar'>
+				<ul>
+					<li><a href="#intheater" 
+						data-transition='flip'
+						data-role='button'>In Theater</a></li>
+					<li><a href="#upcoming" 
+						data-transition='flip'
+						data-role='button'>Up Coming</a></li>
+				</ul>		
+			</div> <!-- /navbar -->	
+		</div> <!-- /footer -->		
+	</div> <!-- /show-page -->
+
+
+
+	<!-- Search page -->
+	<div id="searchpage" data-role="page">
+		<div data-role='header'> 
+			<h1>Movie Details</h1> 
+			<a href="#home" data-icon="home" data-transition='flip'>Home</a>
+		</div>
+
+		<ul id='searchData' data-role="listview"></ul>
+			<!--/show data comes from rottentomatos api-->
+		
+
+		<div data-role='footer' data-position='fixed'>
+			<div data-role='navbar'>
+				<ul>
+					<li><a href="#intheater" 
+						data-transition='flip'
+						data-role='button'>In Theater</a></li>
+					<li><a href="#upcoming" 
+						data-transition='flip'
+						data-role='button'>Up Coming</a></li>
+				</ul>		
+			</div> <!-- /navbar -->	
+		</div> <!-- /footer -->		
+	</div> <!-- /show-page -->	
+
+
+
+	<script src="http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=s3ambfa7xaaddxh7f6qgv2x7&callback=listThearter"></script>
+	<script src="http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=s3ambfa7xaaddxh7f6qgv2x7&callback=listUpcoming"></script>
+	
+	<!--http://stackoverflow.com/questions/16648753/sending-and-receiving-json-data-phonegap-jquery-mobile-app-using-ajax -->
+	
+
+</body>
+</html>
