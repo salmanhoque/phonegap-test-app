@@ -38,7 +38,7 @@ function showMovie(id)
 		output 	  += '<h2>' + data.title + '(' + data.year + ') </h2>';	
 		output	  += '</div>';
 		output	  += '<div class="basic-info">'
-		output	  += '<img src=' + data.posters.original + ' width="'+ showDataWidth +'">'
+		output	  += '<img src=' + data.posters.detailed + ' width="'+ showDataWidth +'">'
 		output	  += '<p> Genres: '; 
 			for (i=0; i <= data.genres.length; i++)
 			{
