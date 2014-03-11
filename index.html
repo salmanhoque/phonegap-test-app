@@ -5,8 +5,9 @@
 	<title>Quick Movie Checker</title>
 	<meta name=“viewport” content=“width=device-width, initial-scale=1, maximum-scale=1” />
 
-<!-- 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" /> 
-	<link rel="stylesheet" href="css/style.css" /> -->	
+<!-- 	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" /> 
+-->
 
 	<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
     <link rel="stylesheet" href="css/native/font-awesome.min.css" />
@@ -23,9 +24,11 @@
 	<!-- nativeDroid: Color Schemes -->
     <link rel="stylesheet" href="css/native/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
 	
+    <!-- My Style Sheet -->
+    <link rel="stylesheet" href="css/style.css" /> 	
 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
 	<script type="text/javascript" src='js/ajax.js'></script>
 
 </head>
@@ -34,12 +37,14 @@
 	<!-- Home Page -->
 	<div id="home" data-role="page" data-theme="b">
 		<div data-role='header' data-position="fixed" data-tap-toggle="false" data-theme='b'> 
-			<h1>My Movie List </h1> 
+			<h1>Quick Movie Checker</h1> 
 		</div>
 
 		<div data-role="content">
-			<h2>Hello There Which Move You Are After!</h2>
-			<input type="text" placeholder="Search Movies" id='searchMovie'/>
+			<div class="search-text">
+				<h2>Welcome To Quick Movie Checker </h2>
+			</div>
+			<input type="text" placeholder="Type Movie Name Here" id='searchMovie'/>
 			<a href='#searchpage' data-transition='slide' 
 				data-role='button' id='searchButton' class='message success'>
 				Search
